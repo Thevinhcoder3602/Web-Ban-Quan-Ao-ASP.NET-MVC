@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutWebBanHang.cshtml";
+}
+@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
+@model X.PagedList.IPagedList<DanhMucSp>
+@foreach (var item in Model)
+{
+  @await Html.PartialAsync("PartialSP", item)
+}
+
+<div class="text-center">
+    @Html.PagedListPager(
+    Model,
+    page => Url.Action("Index", new { page }),
+    new PagedListRenderOptions
+    {
+    LiElementClasses = new[] { "page-item" },
+    PageClasses = new[] { "page-link" },
+    UlElementClasses = new[] { "pagination" }
+    }
+    )
+</div>
+
+
