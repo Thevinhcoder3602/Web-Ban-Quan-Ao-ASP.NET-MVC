@@ -9,33 +9,30 @@ using WebBanHangOnline.Models;
 
 namespace WebBanHangOnline.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("admin")]
+    [Route("admin/adminroles")]
     public class AdminRolesController : Controller
     {
-        private readonly QlbanHangContext _context;
-
-        public AdminRolesController(QlbanHangContext context)
-        {
-            _context = context;
-        }
-
+        QlbanHangContext db = new QlbanHangContext();
         // GET: Admin/AdminRole
+        [Route("Index")]
         public async Task<IActionResult> Index()
         {
-              return _context.PhanQuyens != null ? 
-                          View(await _context.PhanQuyens.ToListAsync()) :
+              return db.PhanQuyens != null ? 
+                          View(await db.PhanQuyens.ToListAsync()) :
                           Problem("Entity set 'QlbanHangContext.PhanQuyens'  is null.");
         }
 
         // GET: Admin/AdminRole/Details/5
-        public async Task<IActionResult> Details(string id)
+        [Route("ChiTietQuyen")]
+        public async Task<IActionResult> ChiTietQuyen(string id)
         {
-            if (id == null || _context.PhanQuyens == null)
+            if (id == null || db.PhanQuyens == null)
             {
                 return NotFound();
             }
 
-            var phanQuyen = await _context.PhanQuyens
+            var phanQuyen = await db.PhanQuyens
                 .FirstOrDefaultAsync(m => m.IdQuyen == id);
             if (phanQuyen == null)
             {
@@ -46,36 +43,40 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminRole/Create
-        public IActionResult Create()
+        [Route("ThemQuyen")]
+        [HttpGet]
+        public IActionResult ThemQuyen()
         {
+           
             return View();
         }
 
         // POST: Admin/AdminRole/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Route("ThemQuyen")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdQuyen,TenQuyen,GhiChu")] PhanQuyen phanQuyen)
+        public IActionResult ThemQuyen(PhanQuyen phanQuyen)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(phanQuyen);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                db.PhanQuyens.Add(phanQuyen);
+                db.SaveChanges();
+                return RedirectToAction("Index", "AdminRoles");
             }
             return View(phanQuyen);
         }
 
         // GET: Admin/AdminRole/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        [Route("SuaQuyen")]
+        [HttpGet]
+        public async Task<IActionResult> SuaQuyen(string id)
         {
-            if (id == null || _context.PhanQuyens == null)
+            if (id == null || db.PhanQuyens == null)
             {
                 return NotFound();
             }
 
-            var phanQuyen = await _context.PhanQuyens.FindAsync(id);
+            var phanQuyen = await db.PhanQuyens.FindAsync(id);
             if (phanQuyen == null)
             {
                 return NotFound();
@@ -84,49 +85,31 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         }
 
         // POST: Admin/AdminRole/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Route("SuaQuyen")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("IdQuyen,TenQuyen,GhiChu")] PhanQuyen phanQuyen)
+        public IActionResult SuaQuyen(PhanQuyen phanQuyen)
         {
-            if (id != phanQuyen.IdQuyen)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(phanQuyen);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PhanQuyenExists(phanQuyen.IdQuyen))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                db.Entry(phanQuyen).State = EntityState.Modified; //Update sp
+                db.SaveChanges();
+                return RedirectToAction("Index", "AdminRole");
             }
             return View(phanQuyen);
         }
 
         // GET: Admin/AdminRole/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        [Route("XoaQuyen")]
+        [HttpGet]
+        public async Task<IActionResult> XoaQuyen(string id)
         {
-            if (id == null || _context.PhanQuyens == null)
+            if (id == null || db.PhanQuyens == null)
             {
                 return NotFound();
             }
 
-            var phanQuyen = await _context.PhanQuyens
+            var phanQuyen = await db.PhanQuyens
                 .FirstOrDefaultAsync(m => m.IdQuyen == id);
             if (phanQuyen == null)
             {
@@ -137,27 +120,41 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         }
 
         // POST: Admin/AdminRole/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [Route("XoaQuyen")]
+        [HttpPost, ActionName("XoaQuyen")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> XoaQuyenConfirmed(string id)
         {
-            if (_context.PhanQuyens == null)
+            try
             {
-                return Problem("Entity set 'QlbanHangContext.PhanQuyens'  is null.");
+                if (db.PhanQuyens == null)
+                {
+                    return Problem("Entity set 'QlbanHangContext.PhanQuyens' is null.");
+                }
+
+                var phanQuyen = await db.PhanQuyens.FindAsync(id);
+                if (phanQuyen == null)
+                {
+                    return NotFound(); // Quyền không tồn tại
+                }
+
+                db.PhanQuyens.Remove(phanQuyen);
+                await db.SaveChangesAsync();
+
+                // Chuyển hướng quay lại trang Index của AdminRoles sau khi xóa thành công
+                return RedirectToAction("Index", "AdminRoles");
             }
-            var phanQuyen = await _context.PhanQuyens.FindAsync(id);
-            if (phanQuyen != null)
+            catch (Exception ex)
             {
-                _context.PhanQuyens.Remove(phanQuyen);
+                // Ghi log lỗi hoặc xử lý lỗi theo cách của bạn
+                return Problem("An error occurred while deleting the role. Error: " + ex.Message);
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
+
 
         private bool PhanQuyenExists(string id)
         {
-          return (_context.PhanQuyens?.Any(e => e.IdQuyen == id)).GetValueOrDefault();
+          return (db.PhanQuyens?.Any(e => e.IdQuyen == id)).GetValueOrDefault();
         }
     }
 }

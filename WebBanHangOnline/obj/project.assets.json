@@ -11521,19 +11521,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sunny\\.nuget\\packages\\": {}
+    "C:\\Users\\chien\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sunny\\source\\repos\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\WebBanHangOnline.csproj",
+      "projectUniqueName": "D:\\Đồ Án Ngành\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\WebBanHangOnline.csproj",
       "projectName": "WebBanHangOnline",
-      "projectPath": "C:\\Users\\Sunny\\source\\repos\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\WebBanHangOnline.csproj",
-      "packagesPath": "C:\\Users\\Sunny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sunny\\source\\repos\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\obj\\",
+      "projectPath": "D:\\Đồ Án Ngành\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\WebBanHangOnline.csproj",
+      "packagesPath": "C:\\Users\\chien\\.nuget\\packages\\",
+      "outputPath": "D:\\Đồ Án Ngành\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sunny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chien\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11613,7 +11613,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

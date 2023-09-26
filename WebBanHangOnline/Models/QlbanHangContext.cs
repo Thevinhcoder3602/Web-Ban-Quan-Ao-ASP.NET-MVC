@@ -25,6 +25,7 @@ public partial class QlbanHangContext : DbContext
 
     public virtual DbSet<ChiTietSp> ChiTietSps { get; set; }
 
+    public virtual DbSet<ChucNang> ChucNangs { get; set; }
 
     public virtual DbSet<DanhMucSp> DanhMucSps { get; set; }
 
@@ -48,10 +49,12 @@ public partial class QlbanHangContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-8DJRU8K\\CSDLSERVER;Initial Catalog=QLBanHang;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-Q95T5TA\\VINHTRAN;Initial Catalog=QLBanHang;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.UseCollation("Latin1_General_CI_AS");
+
         modelBuilder.Entity<AnhChiTietSp>(entity =>
         {
             entity.HasKey(e => new { e.MaChiTietSp, e.TenFileAnh });
@@ -187,6 +190,18 @@ public partial class QlbanHangContext : DbContext
                 .HasConstraintName("FK_ChiTietSP_DanhMucSP");
         });
 
+        modelBuilder.Entity<ChucNang>(entity =>
+        {
+            entity.ToTable("ChucNang");
+
+            entity.Property(e => e.Id)
+                .HasMaxLength(25)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("ID");
+            entity.Property(e => e.MaChucNang).HasMaxLength(50);
+            entity.Property(e => e.TenChucNang).HasMaxLength(50);
+        });
 
         modelBuilder.Entity<DanhMucSp>(entity =>
         {

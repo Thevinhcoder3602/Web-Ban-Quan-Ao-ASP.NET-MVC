@@ -1,42 +1,87 @@
 // Breadcrumb color variations
 @mixin breadcrumb-inverse-variant($color) {
-  background: lighten($color, 25%);
-  border-color: $color;
-
-  .breadcrumb-item {
-    color: $color;
-
-    &:before {
-      color: inherit;
-    }
-
-    a {
-      color: inherit;
-    }
-  }
-
-  &.breadcrumb-custom {
-    background: transparent;
+    background: lighten($color, 25%);
+    border-color: $color;
 
     .breadcrumb-item {
-      background: lighten($color, 25%);
-
-      a {
         color: $color;
-        border: none;
 
         &:before {
-          border-left-color: lighten($color, 25%);
+            color: inherit;
         }
-      }
 
-      span {
-        color: $color;
-      }
-
-      &:last-child {
-        background: transparent;
-      }
+        a {
+            color: inherit;
+        }
     }
-  }
+
+    .breadcrumb-list .breadcrumb-arrows {
+        font-size: 13px;
+        padding: 9px 0;
+        background: transparent;
+        border-radius: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .breadcrumb-list .breadcrumb-arrows > li {
+        display: inline-block;
+    }
+
+    .breadcrumb-list .breadcrumb-arrows {
+        font-size: 12px;
+        white-space: nowrap;
+        padding: 10px 0;
+    }
+
+    .breadcrumb-list .breadcrumb-arrows > li + li:before {
+        padding: 0 2px;
+    }
+
+    .breadcrumb-list .breadcrumb-arrows > .active {
+        padding-right: 10px;
+    }
+}
+.breadcrumb-list .breadcrumb-arrows > li {
+    display: inline-block;
+}
+
+.breadcrumb-list .breadcrumb-arrows > li strong {
+    font-weight: 400;
+}
+
+.breadcrumb-list .breadcrumb-arrows > li a {
+    color: #000000;
+}
+
+.breadcrumb-list .breadcrumb-arrows > li + li:before {
+    padding: 0 3px;
+    color: #ccc;
+    content: "/\00a0";
+}
+
+    &.breadcrumb-custom {
+        background: transparent;
+
+        .breadcrumb-item {
+            background: lighten($color, 25%);
+
+            a {
+                color: $color;
+                border: none;
+
+                &:before {
+                    border-left-color: lighten($color, 25%);
+                }
+            }
+
+            span {
+                color: $color;
+            }
+
+            &:last-child {
+                background: transparent;
+            }
+        }
+    }
 }
