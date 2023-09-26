@@ -33,6 +33,6 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}"); //dang nhap truoc moi vao dc trang ban hang
+    pattern: "{controller=Access}/{action=Login}/{id?}"); //dang nhap truoc moi vao dc trang ban hang
 
 app.Run();

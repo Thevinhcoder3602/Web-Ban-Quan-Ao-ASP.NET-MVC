@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebBanHangOnline.Models;
-using BCrypt.Net;
+
 
 namespace WebBanHangOnline.Controllers
 {

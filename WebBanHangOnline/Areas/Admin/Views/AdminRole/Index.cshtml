@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebBanHangOnline.Models.PhanQuyen>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenQuyen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GhiChu)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenQuyen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GhiChu)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdQuyen">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdQuyen">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdQuyen">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

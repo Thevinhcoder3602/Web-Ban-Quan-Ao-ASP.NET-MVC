@@ -5,8 +5,6 @@ namespace WebBanHangOnline.Models;
 
 public partial class User
 {
-
-
     public string Username { get; set; } = null!;
 
     public string Password { get; set; } = null!;
@@ -16,5 +14,4 @@ public partial class User
     public virtual ICollection<KhachHang> KhachHangs { get; set; } = new List<KhachHang>();
 
     public virtual ICollection<NhanVien> NhanViens { get; set; } = new List<NhanVien>();
-    
 }

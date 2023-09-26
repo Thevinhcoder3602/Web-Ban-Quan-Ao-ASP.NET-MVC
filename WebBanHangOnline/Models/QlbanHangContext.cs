@@ -25,6 +25,7 @@ public partial class QlbanHangContext : DbContext
 
     public virtual DbSet<ChiTietSp> ChiTietSps { get; set; }
 
+
     public virtual DbSet<DanhMucSp> DanhMucSps { get; set; }
 
     public virtual DbSet<HangSx> HangSxes { get; set; }
@@ -40,6 +41,8 @@ public partial class QlbanHangContext : DbContext
     public virtual DbSet<MauSac> MauSacs { get; set; }
 
     public virtual DbSet<NhanVien> NhanViens { get; set; }
+
+    public virtual DbSet<PhanQuyen> PhanQuyens { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
@@ -183,6 +186,7 @@ public partial class QlbanHangContext : DbContext
                 .HasForeignKey(d => d.MaSp)
                 .HasConstraintName("FK_ChiTietSP_DanhMucSP");
         });
+
 
         modelBuilder.Entity<DanhMucSp>(entity =>
         {
@@ -404,6 +408,23 @@ public partial class QlbanHangContext : DbContext
             entity.HasOne(d => d.UsernameNavigation).WithMany(p => p.NhanViens)
                 .HasForeignKey(d => d.Username)
                 .HasConstraintName("FK_NhanVien_User");
+        });
+
+        modelBuilder.Entity<PhanQuyen>(entity =>
+        {
+            entity.HasKey(e => e.IdQuyen).HasName("PK_PhanQuyen_1");
+
+            entity.ToTable("PhanQuyen");
+
+            entity.Property(e => e.IdQuyen)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("idQuyen");
+            entity.Property(e => e.GhiChu)
+                .HasMaxLength(10)
+                .IsFixedLength();
+            entity.Property(e => e.TenQuyen).HasMaxLength(50);
         });
 
         modelBuilder.Entity<User>(entity =>

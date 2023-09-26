@@ -20,7 +20,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         {
             return View();
         }
-        [Route("danhmucsanpham")]
+        [Route("DanhMucSanPham")]
         public IActionResult DanhMucSanPham(int? page)
         {
             int pageSize = 8;
