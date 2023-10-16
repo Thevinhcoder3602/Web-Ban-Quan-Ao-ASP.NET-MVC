@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace WebBanHangOnline.Models;
 
@@ -11,5 +10,4 @@ public partial class PhanQuyen
     public string? TenQuyen { get; set; }
 
     public string? GhiChu { get; set; }
- 
 }
