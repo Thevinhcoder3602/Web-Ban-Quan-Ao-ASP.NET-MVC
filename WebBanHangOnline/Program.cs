@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Policy;
 using WebBanHangOnline.Models;
 using WebBanHangOnline.Repository;
 
@@ -31,7 +33,20 @@ using WebBanHangOnline.Repository;
         app.UseAuthorization();
         app.UseSession();
 
+
         app.MapControllerRoute(
+           name: "ShopSanPham",
+           pattern: "{controller=Product}/{action=shop}/{id?}");
+
+
+//app.MapControllerRoute(
+//            name: "default",
+//            pattern: "{controller=Account}/{action=DangNhap}/{id?}"); //dang nhap truoc moi vao dc trang admin
+
+//app.Run();
+
+
+app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Access}/{action=Login}/{id?}"); //dang nhap truoc moi vao dc trang ban hang
 

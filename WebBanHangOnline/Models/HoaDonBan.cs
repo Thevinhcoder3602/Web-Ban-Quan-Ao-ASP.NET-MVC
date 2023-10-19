@@ -9,9 +9,9 @@ public partial class HoaDonBan
 
     public DateTime? NgayHoaDon { get; set; }
 
-    public string? MaKhachHang { get; set; }
+    public string MaKhachHang { get; set; } = null!;
 
-    public string? MaNhanVien { get; set; }
+    public string MaNhanVien { get; set; } = null!;
 
     public decimal? TongTienHd { get; set; }
 
@@ -21,9 +21,7 @@ public partial class HoaDonBan
 
     public string? GhiChu { get; set; }
 
-    public virtual ICollection<ChiTietHdban> ChiTietHdbans { get; set; } = new List<ChiTietHdban>();
+    public virtual KhachHang MaKhachHangNavigation { get; set; } = null!;
 
-    public virtual KhachHang? MaKhachHangNavigation { get; set; }
-
-    public virtual NhanVien? MaNhanVienNavigation { get; set; }
+    public virtual NhanVien MaNhanVienNavigation { get; set; } = null!;
 }

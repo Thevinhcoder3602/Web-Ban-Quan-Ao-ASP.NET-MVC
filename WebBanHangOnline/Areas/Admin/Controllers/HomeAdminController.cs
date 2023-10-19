@@ -97,14 +97,14 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         public IActionResult XoaSanPham(string maSanPham)
         {
             TempData["Message"] = "";
-            var chiTietSanPham = db.ChiTietSps.Where(x => x.MaSp == maSanPham).ToList(); 
-            if(chiTietSanPham.Count() > 0)
+            var chiTietSanPham = db.ChiTietSps.Where(x => x.MaSp == maSanPham).ToList();
+            if (chiTietSanPham.Count() > 0)
             {
                 TempData["Message"] = "Không xóa được sản phẩm này";
                 return RedirectToAction("DanhMucSanPham", "HomeAdmin");
             }
             var anhSanPham = db.AnhSps.Where(x => x.MaSp == maSanPham);
-            if(anhSanPham.Any()) db.RemoveRange(anhSanPham);
+            if (anhSanPham.Any()) db.RemoveRange(anhSanPham);
             db.Remove(db.DanhMucSps.Find(maSanPham));
             db.SaveChanges();
             TempData["Message"] = "Sản phẩm đã được xóa";

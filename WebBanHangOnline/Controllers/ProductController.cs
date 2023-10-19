@@ -10,14 +10,12 @@ namespace WebBanHangOnline.Controllers
     public class ProductController : Controller
     {
         QlbanHangContext db = new QlbanHangContext();
-
-        [Route("shop.html", Name = "ShopSanPham")]
-
+       
         public IActionResult Index(int? page)
         {
             try
             {
-                int pageSize = 8;
+                int pageSize = 9;
                 int pageNumber = page == null || page < 0 ? 1 : page.Value;
                 var lstSanPham = db.DanhMucSps.AsNoTracking().OrderBy(x => x.TenSp);
                 PagedList<DanhMucSp> lst = new PagedList<DanhMucSp>(lstSanPham, pageNumber, pageSize);

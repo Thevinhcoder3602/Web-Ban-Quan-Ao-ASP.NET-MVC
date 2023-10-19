@@ -1,0 +1,10 @@
+﻿@model IEnumerable<LoaiSp>
+<div class="sidebar__item">
+    <h4>Danh sách sản phẩm</h4>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li><a href="#">@item.Loai</a></li>
+        }
+    </ul>
+</div>

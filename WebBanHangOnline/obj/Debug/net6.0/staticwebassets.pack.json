@@ -589,6 +589,10 @@
       "PackagePath": "staticwebassets\\1LayoutWeb\\fonts\\fontawesome-webfont.woff2"
     },
     {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\anhbia.png",
+      "PackagePath": "staticwebassets\\1LayoutWeb\\img\\anhbia.png"
+    },
+    {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\banner\\banner-1.jpg",
       "PackagePath": "staticwebassets\\1LayoutWeb\\img\\banner\\banner-1.jpg"
     },

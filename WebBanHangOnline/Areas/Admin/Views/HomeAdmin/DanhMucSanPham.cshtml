@@ -59,9 +59,9 @@
             </td>
                 
             <td>
-                <a asp-action="SuaSanPham" asp-route-maSanPham="@item.MaSp">Sửa</a> |
-                <a asp-action="Details" asp-route-id="@item.MaSp">Chi Tiết</a> |
-                <a asp-action="XoaSanPham" asp-route-maSanPham="@item.MaSp">Xóa</a>
+                    <a class="btn btn-outline-secondary btn-icon-text" asp-action="SuaSanPham" asp-route-maSanPham="@item.MaSp">Sửa</a>
+                    <a class="btn btn-outline-success btn-icon-text" asp-action="ChiTietSanPham" asp-route-id="@item.MaSp">Chi Tiết</a>
+                    <a class="btn btn-outline-danger btn-icon-text" asp-action="XoaSanPham" asp-route-maSanPham="@item.MaSp">Xóa</a>
             </td>
         </tr>
 }
@@ -71,7 +71,7 @@
 <div class="product__pagination">
     @Html.PagedListPager(Model, page=>Url.Action("DanhMucSanPham", new{page=page}),new
     X.PagedList.Web.Common.PagedListRenderOptions(){
-    LiElementClasses = new List<String> {"page-item"},
+    LiElementClasses = new List<String> {"page-item"},  
     PageClasses = new List<String> {"page-link"}
     })
 </div>

@@ -25,8 +25,6 @@ public partial class QlbanHangContext : DbContext
 
     public virtual DbSet<ChiTietSp> ChiTietSps { get; set; }
 
-    public virtual DbSet<ChucNang> ChucNangs { get; set; }
-
     public virtual DbSet<DanhMucSp> DanhMucSps { get; set; }
 
     public virtual DbSet<HangSx> HangSxes { get; set; }
@@ -49,7 +47,7 @@ public partial class QlbanHangContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=ADMIN-PC;Initial Catalog=QLBanHang;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        => optionsBuilder.UseSqlServer("Data Source=RAINN-TRAN\\VINHTRAN;Initial Catalog=QLBanHang;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -136,11 +134,6 @@ public partial class QlbanHangContext : DbContext
                 .HasForeignKey(d => d.MaChiTietSp)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_ChiTietHDBan_ChiTietSP");
-
-            entity.HasOne(d => d.MaHoaDonNavigation).WithMany(p => p.ChiTietHdbans)
-                .HasForeignKey(d => d.MaHoaDon)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_ChiTietHDBan_HoaDonBan");
         });
 
         modelBuilder.Entity<ChiTietSp>(entity =>
@@ -188,19 +181,6 @@ public partial class QlbanHangContext : DbContext
             entity.HasOne(d => d.MaSpNavigation).WithMany(p => p.ChiTietSps)
                 .HasForeignKey(d => d.MaSp)
                 .HasConstraintName("FK_ChiTietSP_DanhMucSP");
-        });
-
-        modelBuilder.Entity<ChucNang>(entity =>
-        {
-            entity.ToTable("ChucNang");
-
-            entity.Property(e => e.Id)
-                .HasMaxLength(25)
-                .IsUnicode(false)
-                .IsFixedLength()
-                .HasColumnName("ID");
-            entity.Property(e => e.MaChucNang).HasMaxLength(50);
-            entity.Property(e => e.TenChucNang).HasMaxLength(50);
         });
 
         modelBuilder.Entity<DanhMucSp>(entity =>
@@ -280,7 +260,7 @@ public partial class QlbanHangContext : DbContext
 
         modelBuilder.Entity<HoaDonBan>(entity =>
         {
-            entity.HasKey(e => e.MaHoaDon);
+            entity.HasKey(e => new { e.MaHoaDon, e.MaKhachHang, e.MaNhanVien });
 
             entity.ToTable("HoaDonBan");
 
@@ -288,8 +268,6 @@ public partial class QlbanHangContext : DbContext
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .IsFixedLength();
-            entity.Property(e => e.GhiChu).HasMaxLength(100);
-            entity.Property(e => e.GiamGiaHd).HasColumnName("GiamGiaHD");
             entity.Property(e => e.MaKhachHang)
                 .HasMaxLength(25)
                 .IsUnicode(false)
@@ -298,6 +276,8 @@ public partial class QlbanHangContext : DbContext
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .IsFixedLength();
+            entity.Property(e => e.GhiChu).HasMaxLength(100);
+            entity.Property(e => e.GiamGiaHd).HasColumnName("GiamGiaHD");
             entity.Property(e => e.NgayHoaDon).HasColumnType("datetime");
             entity.Property(e => e.TongTienHd)
                 .HasColumnType("money")
@@ -305,10 +285,12 @@ public partial class QlbanHangContext : DbContext
 
             entity.HasOne(d => d.MaKhachHangNavigation).WithMany(p => p.HoaDonBans)
                 .HasForeignKey(d => d.MaKhachHang)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_HoaDonBan_KhachHang");
 
             entity.HasOne(d => d.MaNhanVienNavigation).WithMany(p => p.HoaDonBans)
                 .HasForeignKey(d => d.MaNhanVien)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_HoaDonBan_NhanVien");
         });
 
@@ -436,9 +418,7 @@ public partial class QlbanHangContext : DbContext
                 .IsUnicode(false)
                 .IsFixedLength()
                 .HasColumnName("idQuyen");
-            entity.Property(e => e.GhiChu)
-                .HasMaxLength(10)
-                .IsFixedLength();
+            entity.Property(e => e.GhiChu).HasMaxLength(100);
             entity.Property(e => e.TenQuyen).HasMaxLength(50);
         });
 

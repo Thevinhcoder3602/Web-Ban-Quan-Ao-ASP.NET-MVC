@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P304UX2E0Bmq8MnAn6nOosS0IOjHFwpUFEQlZhz3jvU=",
+  "Hash": "EpA79kbsGIDMRn1NxaiF38kNMTV/GAt6wC2QxNgVhVk=",
   "Source": "WebBanHangOnline",
   "BasePath": "_content/WebBanHangOnline",
   "Mode": "Default",
@@ -2531,6 +2531,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\1LayoutWeb\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Identity": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\anhbia.png",
+      "SourceId": "WebBanHangOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\",
+      "BasePath": "_content/WebBanHangOnline",
+      "RelativePath": "1LayoutWeb/img/anhbia.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\1LayoutWeb\\img\\anhbia.png"
     },
     {
       "Identity": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\banner\\banner-1.jpg",
