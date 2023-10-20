@@ -33,7 +33,6 @@
 html,
 body {
 	height: 100%;
-	font-family: "Cairo", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
@@ -76,7 +75,6 @@ h6 {
 
 p {
 	font-size: 16px;
-	font-family: "Cairo", sans-serif;
 	color: #6f6f6f;
 	font-weight: 400;
 	line-height: 26px;
@@ -174,7 +172,7 @@ ol {
 .site-btn {
 	font-size: 14px;
 	color: #ffffff;
-	font-weight: 800;
+	font-weight: 700;
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 13px 30px 12px;
