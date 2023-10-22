@@ -18,4 +18,6 @@ public partial class ChiTietHdban
     public string? GhiChu { get; set; }
 
     public virtual ChiTietSp MaChiTietSpNavigation { get; set; } = null!;
+
+    public virtual HoaDonBan MaHoaDonNavigation { get; set; } = null!;
 }

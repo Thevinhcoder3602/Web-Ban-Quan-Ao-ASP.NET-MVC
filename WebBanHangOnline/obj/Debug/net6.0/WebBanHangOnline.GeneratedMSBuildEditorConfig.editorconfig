@@ -92,8 +92,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtVGhlb0xvYWkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/ChiTietSanpham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDaGlUaWV0U2FucGhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/ProductDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/SanPhamTheoLoai.cshtml]
@@ -116,6 +124,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxTUC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/PartialSP_Shop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxTUF9TaG9wLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/_LayoutWebBanHang.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRXZWJCYW5IYW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -131,7 +143,3 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-hr91mghsh4

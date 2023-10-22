@@ -14,7 +14,10 @@
                 <a asp-controller="Home" asp-action="ProductDetail"
                    asp-route-maSp="@Model.MaSp">@Model.TenSp</a>
             </h6>
-            <h5>@Model.GiaLonNhat</h5>
+            <h5>@(Model.GiaLonNhat != null ? Model.GiaLonNhat.Value.ToString("N0") + "đ" : string.Empty)</h5>
+
+
+
         </div>
     </div>
 </div>

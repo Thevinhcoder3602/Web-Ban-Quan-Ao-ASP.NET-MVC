@@ -13,8 +13,6 @@ public partial class DanhMucSp
 
     public string? MaHangSx { get; set; }
 
-    public string? MaNuocSx { get; set; }
-
     public string? GioiThieuSp { get; set; }
 
     public double? ChietKhau { get; set; }

@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebBanHangOnline.bundle.scp.css",
-      "PackagePath": "staticwebassets\\WebBanHangOnline.bundle.scp.css"
-    },
-    {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutAdmin\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\1LayoutAdmin\\assets\\css\\style.css"
     },
@@ -587,6 +583,14 @@
     {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\fonts\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\1LayoutWeb\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\V&H.png",
+      "PackagePath": "staticwebassets\\1LayoutWeb\\img\\V&H.png"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\V_H-removebg-preview.png",
+      "PackagePath": "staticwebassets\\1LayoutWeb\\img\\V_H-removebg-preview.png"
     },
     {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\anhbia.png",

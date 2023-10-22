@@ -134,6 +134,11 @@ public partial class QlbanHangContext : DbContext
                 .HasForeignKey(d => d.MaChiTietSp)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_ChiTietHDBan_ChiTietSP");
+
+            entity.HasOne(d => d.MaHoaDonNavigation).WithMany(p => p.ChiTietHdbans)
+                .HasForeignKey(d => d.MaHoaDon)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ChiTietHDBan_HoaDonBan");
         });
 
         modelBuilder.Entity<ChiTietSp>(entity =>
@@ -216,11 +221,6 @@ public partial class QlbanHangContext : DbContext
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .IsFixedLength();
-            entity.Property(e => e.MaNuocSx)
-                .HasMaxLength(25)
-                .IsUnicode(false)
-                .IsFixedLength()
-                .HasColumnName("MaNuocSX");
             entity.Property(e => e.TenSp)
                 .HasMaxLength(150)
                 .HasColumnName("TenSP");
@@ -260,7 +260,7 @@ public partial class QlbanHangContext : DbContext
 
         modelBuilder.Entity<HoaDonBan>(entity =>
         {
-            entity.HasKey(e => new { e.MaHoaDon, e.MaKhachHang, e.MaNhanVien });
+            entity.HasKey(e => e.MaHoaDon).HasName("PK_HoaDonBan_1");
 
             entity.ToTable("HoaDonBan");
 
@@ -268,6 +268,8 @@ public partial class QlbanHangContext : DbContext
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .IsFixedLength();
+            entity.Property(e => e.GhiChu).HasMaxLength(100);
+            entity.Property(e => e.GiamGiaHd).HasColumnName("GiamGiaHD");
             entity.Property(e => e.MaKhachHang)
                 .HasMaxLength(25)
                 .IsUnicode(false)
@@ -276,8 +278,6 @@ public partial class QlbanHangContext : DbContext
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .IsFixedLength();
-            entity.Property(e => e.GhiChu).HasMaxLength(100);
-            entity.Property(e => e.GiamGiaHd).HasColumnName("GiamGiaHD");
             entity.Property(e => e.NgayHoaDon).HasColumnType("datetime");
             entity.Property(e => e.TongTienHd)
                 .HasColumnType("money")

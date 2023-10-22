@@ -28,8 +28,6 @@ namespace WebBanHangOnline.Controllers
             
         }
 
-
-        [Route("/{Alias}-{maLoai}.html", Name = "SanPhamTheoLoai")]
         public IActionResult SanPhamTheoLoai(string maLoai, int? page = 1)
         {
 
@@ -50,7 +48,6 @@ namespace WebBanHangOnline.Controllers
             }
         }
 
-        [Route("/{Alias}-{maSp}.html", Name = "ChiTietSanPham")]
         public IActionResult ChiTietSanpham(string maSp)
         {
             try
