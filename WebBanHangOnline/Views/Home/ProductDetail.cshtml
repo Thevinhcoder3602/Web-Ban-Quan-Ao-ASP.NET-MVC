@@ -2,6 +2,9 @@
 @{
     ViewData["Title"] = "ProductDetail";
     Layout = "~/Views/Shared/_LayoutWebBanHang.cshtml";
+   
+}
+
 }
 @model WebBanHangOnline.ViewModels.HomeProductDetailViewModel
 
@@ -90,6 +93,7 @@
                             <div class="product__details__tab__desc">
                                 <h6>Thông tin sản phẩm</h6>
                                 <p>
+                                    <span><b>Mã loại:</b></span>
                                     @Model.danhMucSP.MaLoai
                                 </p>
                                 <p>

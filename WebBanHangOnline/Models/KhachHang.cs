@@ -5,9 +5,11 @@ namespace WebBanHangOnline.Models;
 
 public partial class KhachHang
 {
-    public string MaKhanhHang { get; set; } = null!;
+    public string MaKhachHang { get; set; } = null!;
 
-    public string? Username { get; set; }
+    public string Username { get; set; } = null!;
+
+    public string? Password { get; set; }
 
     public string? TenKhachHang { get; set; }
 
@@ -25,5 +27,5 @@ public partial class KhachHang
 
     public virtual ICollection<HoaDonBan> HoaDonBans { get; set; } = new List<HoaDonBan>();
 
-    public virtual User? UsernameNavigation { get; set; }
+    public virtual User UsernameNavigation { get; set; } = null!;
 }

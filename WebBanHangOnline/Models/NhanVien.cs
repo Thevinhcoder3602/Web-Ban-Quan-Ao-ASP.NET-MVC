@@ -9,6 +9,8 @@ public partial class NhanVien
 
     public string? Username { get; set; }
 
+    public string? Password { get; set; }
+
     public string? TenNhanVien { get; set; }
 
     public DateTime? NgaySinh { get; set; }

@@ -18,8 +18,10 @@ var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddScoped<ILoaiSpRepository, LoaiSpRepository>();
         builder.Services.AddSession();
+       
 
         var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -33,6 +35,7 @@ if (!app.Environment.IsDevelopment())
         app.UseStaticFiles();
 
         app.UseRouting();
+        app.UseAuthentication();
 
         app.UseAuthorization();
         app.UseSession();

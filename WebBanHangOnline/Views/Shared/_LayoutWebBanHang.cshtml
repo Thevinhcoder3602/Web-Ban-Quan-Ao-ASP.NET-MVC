@@ -112,10 +112,18 @@
                                     <li><a href="#">English</a></li>
                                 </ul>
                             </div>
-                            <div class="header__top__right__auth">
+                            <div class="header__top__right__language">
                                 @* <a href="#"><i class="fa fa-user"></i> Login</a> *@
-                                <a asp-controller="Access" asp-action="Logout"><i class="fa fa-user">
-                                </i>Đăng xuất</a>
+                                <div>Tài khoản</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a asp-controller="Access" asp-action="taikhoancuatoi">
+                                            <i></i>Tài khoản của tôi</a></li>
+                                    <li><a asp-controller="Access" asp-action="Logout">
+                                            <i></i>Đăng xuất</a></li>
+                                    
+                                </ul>
+                                
                             </div>
                         </div>
                     </div>

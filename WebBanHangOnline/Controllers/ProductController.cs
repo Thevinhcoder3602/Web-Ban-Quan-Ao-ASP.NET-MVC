@@ -50,17 +50,22 @@ namespace WebBanHangOnline.Controllers
 
         public IActionResult ChiTietSanpham(string maSp)
         {
+
             try
             {
                 var sanPham = db.DanhMucSps.SingleOrDefault(x => x.MaSp == maSp);
                 var anhSP = db.AnhSps.Where(x => x.MaSp == maSp).ToList();
+               
                 ViewBag.anhSP = anhSP;
                 return View(sanPham);
+
             }
+
             catch
             {
                 return RedirectToAction("Index", "Home");
             }
+
         }
 
         public IActionResult ProductDetail(string maSp)
@@ -72,6 +77,8 @@ namespace WebBanHangOnline.Controllers
                 danhMucSP = sanPham,
                 anhSps = anhSP
             };
+
+           
             return View(homeProductDetailViewModel);
         }
     }

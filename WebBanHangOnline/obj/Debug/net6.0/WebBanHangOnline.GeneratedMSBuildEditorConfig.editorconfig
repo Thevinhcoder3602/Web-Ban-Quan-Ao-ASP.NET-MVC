@@ -64,6 +64,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Access/DangKyTaiKhoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXERhbmdLeVRhaUtob2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Access/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

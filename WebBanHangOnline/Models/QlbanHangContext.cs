@@ -310,11 +310,11 @@ public partial class QlbanHangContext : DbContext
 
         modelBuilder.Entity<KhachHang>(entity =>
         {
-            entity.HasKey(e => e.MaKhanhHang);
+            entity.HasKey(e => e.MaKhachHang);
 
             entity.ToTable("KhachHang");
 
-            entity.Property(e => e.MaKhanhHang)
+            entity.Property(e => e.MaKhachHang)
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .IsFixedLength();
@@ -325,6 +325,10 @@ public partial class QlbanHangContext : DbContext
             entity.Property(e => e.DiaChi).HasMaxLength(150);
             entity.Property(e => e.GhiChu).HasMaxLength(100);
             entity.Property(e => e.NgaySinh).HasColumnType("date");
+            entity.Property(e => e.Password)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .IsFixedLength();
             entity.Property(e => e.SoDienThoai)
                 .HasMaxLength(15)
                 .IsUnicode(false)
@@ -338,6 +342,7 @@ public partial class QlbanHangContext : DbContext
 
             entity.HasOne(d => d.UsernameNavigation).WithMany(p => p.KhachHangs)
                 .HasForeignKey(d => d.Username)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_KhachHang_User");
         });
 
@@ -401,6 +406,10 @@ public partial class QlbanHangContext : DbContext
             entity.Property(e => e.DiaChi).HasMaxLength(150);
             entity.Property(e => e.GhiChu).HasMaxLength(100);
             entity.Property(e => e.NgaySinh).HasColumnType("date");
+            entity.Property(e => e.Password)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .IsFixedLength();
             entity.Property(e => e.SoDienThoai1)
                 .HasMaxLength(15)
                 .IsUnicode(false)
