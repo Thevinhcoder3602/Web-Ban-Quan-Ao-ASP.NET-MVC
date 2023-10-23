@@ -11,11 +11,11 @@ public partial class DanhMucSp
 
     public string? MaChatLieu { get; set; }
 
+    public string? MaNuocSx { get; set; }
+
     public string? MaHangSx { get; set; }
 
     public string? GioiThieuSp { get; set; }
-
-    public double? ChietKhau { get; set; }
 
     public string? MaLoai { get; set; }
 
@@ -24,6 +24,8 @@ public partial class DanhMucSp
     public decimal? GiaNhoNhat { get; set; }
 
     public decimal? GiaLonNhat { get; set; }
+
+    public decimal? ChietKhau { get; set; }
 
     public virtual ICollection<AnhSp> AnhSps { get; set; } = new List<AnhSp>();
 
@@ -34,4 +36,6 @@ public partial class DanhMucSp
     public virtual HangSx? MaHangSxNavigation { get; set; }
 
     public virtual LoaiSp? MaLoaiNavigation { get; set; }
+
+    public virtual QuocGium? MaNuocSxNavigation { get; set; }
 }

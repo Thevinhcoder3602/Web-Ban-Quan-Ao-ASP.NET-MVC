@@ -593,8 +593,12 @@
       "PackagePath": "staticwebassets\\1LayoutWeb\\img\\V_H-removebg-preview.png"
     },
     {
-      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\anhbia.png",
-      "PackagePath": "staticwebassets\\1LayoutWeb\\img\\anhbia.png"
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\V_H.png",
+      "PackagePath": "staticwebassets\\1LayoutWeb\\img\\V_H.png"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\V_H_bìa.png",
+      "PackagePath": "staticwebassets\\1LayoutWeb\\img\\V_H_bìa.png"
     },
     {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\banner\\banner-1.jpg",
@@ -603,6 +607,10 @@
     {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\banner\\banner-2.jpg",
       "PackagePath": "staticwebassets\\1LayoutWeb\\img\\banner\\banner-2.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\bia3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutWeb\\img\\bia3.jpg"
     },
     {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\blog\\blog-1.jpg",
@@ -855,6 +863,10 @@
     {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\product\\product-9.jpg",
       "PackagePath": "staticwebassets\\1LayoutWeb\\img\\product\\product-9.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\img\\test.png",
+      "PackagePath": "staticwebassets\\1LayoutWeb\\img\\test.png"
     },
     {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutWeb\\js\\bootstrap.min.js",
@@ -1317,6 +1329,130 @@
       "PackagePath": "staticwebassets\\ProductImages\\Imgs\\1.jpg"
     },
     {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\10.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\10.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\10_1.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\10_1.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\10_2.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\10_2.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\10_3.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\10_3.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\11.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\11.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\11_1.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\11_1.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\11_2.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\11_2.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\11_3.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\11_3.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\12.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\12.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\12_1.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\12_1.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\12_2.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\12_2.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\12_3.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\12_3.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\13.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\13.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\13_1.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\13_1.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\13_2.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\13_2.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\13_3.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\13_3.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\14.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\14.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\14_1.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\14_1.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\14_2.png",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\14_2.png"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\15.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\15.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\15_1.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\15_1.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\15_2.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\15_2.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\15_3.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\15_3.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\16.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\16.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\16_1.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\16_1.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\16_2.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\16_2.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\16_3.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\16_3.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\17.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\17.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\17_1.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\17_1.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\17_2.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\17_2.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\17_3.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\17_3.jpg"
+    },
+    {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\1_2.jpg",
       "PackagePath": "staticwebassets\\ProductImages\\Imgs\\1_2.jpg"
     },
@@ -1435,6 +1571,22 @@
     {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\8_3.jpg",
       "PackagePath": "staticwebassets\\ProductImages\\Imgs\\8_3.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\9.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\9.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\9_1.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\9_1.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\9_2.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\9_2.jpg"
+    },
+    {
+      "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\ProductImages\\Imgs\\9_3.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\Imgs\\9_3.jpg"
     },
     {
       "Id": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\css\\site.css",

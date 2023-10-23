@@ -43,6 +43,8 @@ public partial class QlbanHangContext : DbContext
 
     public virtual DbSet<PhanQuyen> PhanQuyens { get; set; }
 
+    public virtual DbSet<QuocGium> QuocGia { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -203,6 +205,9 @@ public partial class QlbanHangContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false)
                 .IsFixedLength();
+            entity.Property(e => e.ChietKhau)
+                .HasComputedColumnSql("((([GiaLonNhat]-[GiaNhoNhat])*(100))/[GiaLonNhat])", true)
+                .HasColumnType("money");
             entity.Property(e => e.GiaLonNhat).HasColumnType("money");
             entity.Property(e => e.GiaNhoNhat).HasColumnType("money");
             entity.Property(e => e.GioiThieuSp)
@@ -221,6 +226,11 @@ public partial class QlbanHangContext : DbContext
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .IsFixedLength();
+            entity.Property(e => e.MaNuocSx)
+                .HasMaxLength(25)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("MaNuocSX");
             entity.Property(e => e.TenSp)
                 .HasMaxLength(150)
                 .HasColumnName("TenSP");
@@ -236,6 +246,10 @@ public partial class QlbanHangContext : DbContext
             entity.HasOne(d => d.MaLoaiNavigation).WithMany(p => p.DanhMucSps)
                 .HasForeignKey(d => d.MaLoai)
                 .HasConstraintName("FK_DanhMucSP_LoaiSP");
+
+            entity.HasOne(d => d.MaNuocSxNavigation).WithMany(p => p.DanhMucSps)
+                .HasForeignKey(d => d.MaNuocSx)
+                .HasConstraintName("FK_DanhMucSP_QuocGia");
         });
 
         modelBuilder.Entity<HangSx>(entity =>
@@ -420,6 +434,17 @@ public partial class QlbanHangContext : DbContext
                 .HasColumnName("idQuyen");
             entity.Property(e => e.GhiChu).HasMaxLength(100);
             entity.Property(e => e.TenQuyen).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<QuocGium>(entity =>
+        {
+            entity.HasKey(e => e.MaNuoc);
+
+            entity.Property(e => e.MaNuoc)
+                .HasMaxLength(25)
+                .IsUnicode(false)
+                .IsFixedLength();
+            entity.Property(e => e.TenNuoc).HasMaxLength(50);
         });
 
         modelBuilder.Entity<User>(entity =>
