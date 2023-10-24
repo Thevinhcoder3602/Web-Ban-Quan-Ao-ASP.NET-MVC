@@ -83,7 +83,7 @@ namespace WebBanHangOnline.Controllers
         [HttpPost]
       
         [Route("DangKy", Name = "DangKy")]
-       public IActionResult DangKyTaiKhoan(User user)
+       public IActionResult DangKyTaiKhoan(User user, RegisterVM kh)
         {
            if ( user != null )
             {
@@ -91,38 +91,56 @@ namespace WebBanHangOnline.Controllers
 				string hashPassword = user.Password.ToMD5();
                  // Gán mật khẩu đã băm vào đối tượng User
                 user.Password = hashPassword;
-				// Thêm khách hàng mới vào cơ sở dữ liệu
+
+
+				// Tạo mã khách hàng tự động dựa trên số lượng khách hàng hiện có
+		        var khachHangCount = db.KhachHangs.Count() + 1;
+				string maKhachHang = "KH" + khachHangCount.ToString("D3");
+				// D3 để tạo mã có dạng KH001, KH002, ...
+				
+
+
+				// Thêm khách hàng mới vào bảng Khách hàng
+				KhachHang khachhang = new KhachHang
+				{
+                    MaKhachHang = maKhachHang,
+					TenKhachHang = kh.TenKhachHang,
+					SoDienThoai = kh.SoDienThoai.Trim().ToLower(),
+					Username = user.Username,
+					Password = user.Password
+				};
+				db.KhachHangs.Add(khachhang);
+
+				// Thêm Username và Password mới vào bảng User
 				db.Users.Add(user);
+                
 				db.SaveChanges();
 				return RedirectToAction("Login");
 
 			}
+
             return RedirectToAction("DangKyTaiKhoan", "Access");
             
         }
-
-        [Route("taikhoancuatoi")]
-		public IActionResult Dashboard()
-		{
-			//var taikhoanID = HttpContext.Session.GetString("MaKhachHang");
-			//if (taikhoanID != null)
-			//{
-			//	var khachhang = db.KhachHangs.AsNoTracking().SingleOrDefault(x => x.MaKhachHang == Convert.ToInt32(taikhoanID));
-			//	if (khachhang != null)
-			//	{
-			//		var lsDonHang = db.Orders
-			//			.Include(x => x.TransactStatus)
-			//			.AsNoTracking()
-			//			.Where(x => x.MaKhachHang == khachhang.MaKhachHang)
-			//			.OrderByDescending(x => x.OrderDate)
-			//			.ToList();
-			//		ViewBag.DonHang = lstDonHang;
-			//		return View(khachhang);
-			//	}
-			//}
-			return RedirectToAction("Login");
-		}
-		public IActionResult Logout()
+        [HttpGet]
+        [Route("myaccount")]
+        public IActionResult Dashboard()
+        {
+            var taikhoanID = HttpContext.Session.GetString("MaKhachHang");
+            if (taikhoanID != null)
+            {
+                // Lấy thông tin khách hàng từ cơ sở dữ liệu dựa trên mã khách hàng (chuỗi)
+                var khachhang = db.KhachHangs.AsNoTracking().SingleOrDefault(x => x.MaKhachHang == taikhoanID);
+                if (khachhang != null)
+                {
+                    // Truyền thông tin khách hàng vào trang Dashboard để hiển thị
+                    return View(khachhang);
+                }
+            }
+            // Nếu không đăng nhập, chuyển hướng đến trang đăng nhập
+            return RedirectToAction("Login");
+        }
+        public IActionResult Logout()
         {
 
             HttpContext.Session.Clear();

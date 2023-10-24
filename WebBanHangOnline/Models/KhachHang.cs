@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebBanHangOnline.Models;
 
 public partial class KhachHang
 {
-    public string MaKhachHang { get; set; } = null!;
+	[Key]
+	
+	
+	public string MaKhachHang { get; set; } = null!;
 
     public string Username { get; set; } = null!;
 
@@ -28,4 +32,8 @@ public partial class KhachHang
     public virtual ICollection<HoaDonBan> HoaDonBans { get; set; } = new List<HoaDonBan>();
 
     public virtual User UsernameNavigation { get; set; } = null!;
+
+	
 }
+
+
