@@ -93,7 +93,6 @@ namespace WebBanHangOnline.Controllers
         public IActionResult Index()
         {
            
-            var lstGioHang = GioHang;
             return View(GioHang);
         }
     }
