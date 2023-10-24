@@ -9,7 +9,7 @@ namespace WebBanHangOnline.Controllers
     
     public class ProductController : Controller
     {
-        QlbanHangContext db = new QlbanHangContext();
+        QLBanHangContext db = new QLBanHangContext();
        
         public IActionResult Index(int? page)
         {
@@ -28,6 +28,8 @@ namespace WebBanHangOnline.Controllers
             
         }
 
+
+        [Route("/{Alias}-{maLoai}.html", Name = "SanPhamTheoLoai")]
         public IActionResult SanPhamTheoLoai(string maLoai, int? page = 1)
         {
 
@@ -48,24 +50,20 @@ namespace WebBanHangOnline.Controllers
             }
         }
 
+        [Route("/{Alias}-{maSp}.html", Name = "ChiTietSanPham")]
         public IActionResult ChiTietSanpham(string maSp)
         {
-
             try
             {
                 var sanPham = db.DanhMucSps.SingleOrDefault(x => x.MaSp == maSp);
                 var anhSP = db.AnhSps.Where(x => x.MaSp == maSp).ToList();
-               
                 ViewBag.anhSP = anhSP;
                 return View(sanPham);
-
             }
-
             catch
             {
                 return RedirectToAction("Index", "Home");
             }
-
         }
 
         public IActionResult ProductDetail(string maSp)
@@ -77,8 +75,6 @@ namespace WebBanHangOnline.Controllers
                 danhMucSP = sanPham,
                 anhSps = anhSP
             };
-
-           
             return View(homeProductDetailViewModel);
         }
     }

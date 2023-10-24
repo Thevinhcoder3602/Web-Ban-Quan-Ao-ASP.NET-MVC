@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WebBanHangOnline.Models;
-
-public partial class ChatLieu
+namespace WebBanHangOnline.Models
 {
-    public string MaChatLieu { get; set; } = null!;
+    public partial class ChatLieu
+    {
+        public ChatLieu()
+        {
+            DanhMucSps = new HashSet<DanhMucSp>();
+        }
 
-    public string? ChatLieu1 { get; set; }
+        public string MaChatLieu { get; set; } = null!;
+        public string? ChatLieu1 { get; set; }
 
-    public virtual ICollection<DanhMucSp> DanhMucSps { get; set; } = new List<DanhMucSp>();
+        public virtual ICollection<DanhMucSp> DanhMucSps { get; set; }
+    }
 }

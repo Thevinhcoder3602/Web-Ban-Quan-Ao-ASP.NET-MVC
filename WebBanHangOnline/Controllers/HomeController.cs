@@ -10,7 +10,7 @@ namespace WebBanHangOnline.Controllers
 {
     public class HomeController : Controller
     {
-        QlbanHangContext db = new QlbanHangContext();
+        QLBanHangContext db = new QLBanHangContext();
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -55,7 +55,6 @@ namespace WebBanHangOnline.Controllers
                 danhMucSP = sanPham,
                 anhSps = anhSP
             };
-           
             return View(homeProductDetailViewModel);
         }
 
