@@ -13,8 +13,9 @@ namespace WebBanHangOnline.Controllers
 {
   
     public class AccessController : Controller
+
     {
-        private  QlbanHangContext db = new QlbanHangContext();
+        private readonly QlbanHangContext db = new QlbanHangContext();
         [HttpGet]
 
         public IActionResult Login()
@@ -41,7 +42,9 @@ namespace WebBanHangOnline.Controllers
                 if (u != null)
                 {
                     HttpContext.Session.SetString("UserName", u.Username.ToString());
+                    ViewBag.UserName = u.Username;
                     return RedirectToAction("Index", "Home");
+
                 }
                 else
                 {
@@ -122,9 +125,8 @@ namespace WebBanHangOnline.Controllers
             return RedirectToAction("DangKyTaiKhoan", "Access");
             
         }
-        [HttpGet]
-        [Route("myaccount")]
-        public IActionResult Dashboard()
+
+        public IActionResult taikhoancuatoi()
         {
             var taikhoanID = HttpContext.Session.GetString("MaKhachHang");
             if (taikhoanID != null)

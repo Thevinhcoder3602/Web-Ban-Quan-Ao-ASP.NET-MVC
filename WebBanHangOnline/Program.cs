@@ -17,8 +17,11 @@ var builder = WebApplication.CreateBuilder(args);
         builder.Services.AddDbContext<QlbanHangContext>(x => x.UseSqlServer(connectionString));
 
         builder.Services.AddScoped<ILoaiSpRepository, LoaiSpRepository>();
-        builder.Services.AddSession();
-       
+        builder.Services.AddSession(options =>
+        {
+            options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian chờ cho Session
+        });
+
 
         var app = builder.Build();
 
@@ -31,7 +34,10 @@ if (!app.Environment.IsDevelopment())
             app.UseHsts();
         }
 
-        app.UseHttpsRedirection();
+       
+
+
+app.UseHttpsRedirection();
         app.UseStaticFiles();
 
         app.UseRouting();

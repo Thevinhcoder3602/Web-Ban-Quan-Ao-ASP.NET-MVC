@@ -74,8 +74,25 @@
                                     <li><a href="#">English</a></li>
                                 </ul>
                             </div>
-                            <div class="header__top__right__auth">
-                                <a asp-controller="Access" asp-action="Logout"><i class="fa fa-user"></i> Đăng xuất</a>
+                            <div class="header__top__right__language">
+
+                                <div class="fa fa-user"> Xin Chào @ViewBag.UserName</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li>
+                                        <a asp-controller="MyAccount" asp-action="Index">
+                                            <i></i>Tài khoản của tôi
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a asp-controller="Access" asp-action="Logout">
+                                            <i></i>Đăng xuất
+                                        </a>
+                                    </li>
+
+                                </ul>
+
                             </div>
                         </div>
                     </div>
