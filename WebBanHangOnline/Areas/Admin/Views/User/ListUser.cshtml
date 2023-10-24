@@ -1,0 +1,64 @@
+﻿@model IEnumerable<WebBanHangOnline.Models.User>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "ListUser";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Danh sách tài khoản</h1>
+
+<p>
+    <a class="btn btn-outline-info btn-fw" asp-action="ThemUser">Thêm Mới</a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr class="table-danger">
+            <th>
+                Tên đăng nhập
+            </th>
+            <th>
+               Mật khẩu
+            </th>
+            <th>
+               Tên quyền
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string @cls = "table-primary";
+        }
+@foreach (var item in Model) {
+            i = i + 1;
+            cls = "table-primary";
+            if(i%2==0)
+            {
+                   cls = "table-info";
+            }
+            <tr class="@cls">
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem =>item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoaiUser)
+            </td>
+            <td>
+                    <a class="btn btn-outline-secondary btn-icon-text" asp-action="DoiQuyen" asp-route-name="@item.Username">Đổi quyền</a>
+                    <a class="btn btn-outline-danger btn-icon-text" asp-action="XoaTaiKhoan" asp-route-name="@item.Username">Xóa</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p></p>
+<style>
+    h1{
+        background-color:#FFE4B5
+    }
+</style>

@@ -3,8 +3,8 @@ namespace WebBanHangOnline.Repository
 {
     public class LoaiSpRepository : ILoaiSpRepository
     {
-        private readonly QlbanHangContext _context;
-        public LoaiSpRepository(QlbanHangContext context)
+        private readonly QLBanHangContext _context;
+        public LoaiSpRepository(QLBanHangContext context)
         {
             _context = context;
         }

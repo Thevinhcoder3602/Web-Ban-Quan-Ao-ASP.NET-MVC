@@ -9,7 +9,7 @@ namespace WebBanHangOnline.Controllers
     [ApiController]
     public class ProductAPIController : ControllerBase
     {
-        QlbanHangContext db = new QlbanHangContext();
+        QLBanHangContext db = new QLBanHangContext();
         [HttpGet]
         public IEnumerable<Product> GetAllProducts()
         {

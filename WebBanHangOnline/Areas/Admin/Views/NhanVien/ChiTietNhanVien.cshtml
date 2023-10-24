@@ -1,0 +1,66 @@
+﻿@model WebBanHangOnline.Models.NhanVien
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "ChiTietNhanVien";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    h1{
+        background-color:#FFE4B5
+    }
+</style>
+<h1>Thông tin chi tiết nhân viên</h1>
+
+<div>
+    <hr />
+    <table class="table">
+    <thead>
+        <tr class="table-danger">
+            <th>
+               Danh mục
+            </th>
+            <th>
+               Thông tin
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+             <tr>
+                <td>Mã nhân viên</td>
+                <td>@Html.DisplayFor(model => model.MaNhanVien)</td>
+            </tr>
+            <tr>
+                <td>Tên nhân viên</td>
+                <td>@Html.DisplayFor(model => model.TenNhanVien)</td>
+            </tr>
+             <tr>
+                <td>Tên đăng nhập</td>
+                <td>@Html.DisplayFor(model => model.Username)</td>
+            </tr>
+             <tr>
+                <td>Chức vụ</td>
+                <td>@Html.DisplayFor(model => model.ChucVu)</td>
+            </tr>
+             <tr>
+                <td>Ngày sinh</td>
+                <td>@Html.DisplayFor(model => model.NgaySinh)</td>
+            </tr>
+             <tr>
+                <td>Số điện thoại</td>
+                <td>@Html.DisplayFor(model => model.SoDienThoai1)</td>
+            </tr>
+             <tr>
+                <td>Địa chỉ</td>
+                <td>@Html.DisplayFor(model => model.DiaChi)</td>
+            </tr>
+             <tr>
+                <td>Ghi chú</td>
+                <td>@Html.DisplayFor(model => model.GhiChu)</td>
+            </tr>
+    </tbody>
+       </table> 
+</div>
+<hr />
+<div>
+     <a class="btn btn-outline-danger btn-icon-text" asp-action="ListNhanVien" >Trở về</a>
+</div>

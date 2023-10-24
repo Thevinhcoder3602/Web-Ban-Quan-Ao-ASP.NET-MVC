@@ -7,10 +7,10 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("admin")]
-    [Route("admin/homeadmin/dangnhap")]
+    [Route("admin/account")]
     public class AccountController : Controller
     {
-        QlbanHangContext db = new QlbanHangContext();
+        QLBanHangContext db = new QLBanHangContext();
         [HttpGet]
 
         public IActionResult DangNhap()
@@ -21,7 +21,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             }
             else
             {
-                return RedirectToAction("HomeAdmin","admin");
+                return RedirectToAction("Index","admin");
             }
 
         }
@@ -33,14 +33,13 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             if (taiKhoan != null)
             {
                 HttpContext.Session.SetString("username", "taiKhoan");
-                return RedirectToAction("HomeAdmin","admin");
+                return RedirectToAction("Index", "admin"); 
             }
             else
             {
                 TempData["error"] = "Tài khoản hoặc mật khẩu không đúng";
                 return View();
-            }    
-         
+            }   
         }
 
         public IActionResult DangXuat()
