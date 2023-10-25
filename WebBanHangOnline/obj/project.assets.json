@@ -11659,11 +11659,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\WebBanHangOnline.csproj",
+      "projectUniqueName": "E:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\WebBanHangOnline.csproj",
       "projectName": "WebBanHangOnline",
-      "projectPath": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\WebBanHangOnline.csproj",
+      "projectPath": "E:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\WebBanHangOnline.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\obj\\",
+      "outputPath": "E:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

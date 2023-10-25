@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IRzVEPCySk/SYseJmLiMPrqq+zlu1aCPx9V2XIw8IWilPrLk7CBWxpIiTj8pgMhzGBSh5Eg8yaelKDAusQohmQ==",
+  "dgSpecHash": "0JtZZMmnO5DCkwT3LOJNvWfyB1zKiqvNazUA1XRF5FP/INoUaptvig+3nVzVQH5r/IwzW+RmYYDDwZo/KgWuuw==",
   "success": true,
-  "projectFilePath": "D:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\WebBanHangOnline.csproj",
+  "projectFilePath": "E:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\WebBanHangOnline.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

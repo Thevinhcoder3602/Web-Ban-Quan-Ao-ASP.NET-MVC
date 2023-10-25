@@ -9,161 +9,141 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebBanHangOnline
 build_property.RootNamespace = WebBanHangOnline
-build_property.ProjectDir = D:\Web-Ban-Quan-Ao-ASP.NET-MVC\WebBanHangOnline\
+build_property.ProjectDir = E:\Web-Ban-Quan-Ao-ASP.NET-MVC\WebBanHangOnline\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Web-Ban-Quan-Ao-ASP.NET-MVC\WebBanHangOnline
+build_property.MSBuildProjectDirectory = E:\Web-Ban-Quan-Ao-ASP.NET-MVC\WebBanHangOnline
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/Account/DangNhap.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/Account/DangNhap.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxEYW5nTmhhcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/AdminRoles/ChiTietQuyen.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xDaGlUaWV0UXV5ZW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/AdminRoles/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/AdminRoles/SuaQuyen.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xTdWFRdXllbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/AdminRoles/ThemQuyen.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xUaGVtUXV5ZW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/AdminRoles/XoaQuyen.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xYb2FRdXllbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/HomeAdmin/DanhMucSanPham.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/HomeAdmin/DanhMucSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXERhbmhNdWNTYW5QaGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/HomeAdmin/Index.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/HomeAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/HomeAdmin/SuaSanPham.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/HomeAdmin/SuaSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YVNhblBoYW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/HomeAdmin/ThemSanPhamMoi.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/HomeAdmin/ThemSanPhamMoi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1TYW5QaGFtTW9pLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/Shared/PartialSideBar.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/Shared/PartialSideBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXFBhcnRpYWxTaWRlQmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Access/DangKyTaiKhoan.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Access/DangKyTaiKhoan.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXERhbmdLeVRhaUtob2FuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Access/Dashboard.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Access/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Access/Login.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Access/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Contact/Index.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Home/ChiTietSanpham.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Home/ChiTietSanpham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGlUaWV0U2FucGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Home/Index.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Home/Privacy.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Home/ProductDetail.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Home/ProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Home/SanPhamTheoLoai.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Home/SanPhamTheoLoai.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtVGhlb0xvYWkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/MyAccount/MyAccount.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/MyAccount/MyAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XE15QWNjb3VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/ChiTietSanpham.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/ChiTietSanpham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDaGlUaWV0U2FucGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/Index.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/ProductDetail.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/ProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/SanPhamTheoLoai.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Product/SanPhamTheoLoai.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTYW5QaGFtVGhlb0xvYWkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/Components/HeaderCart/Default.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/Components/HeaderCart/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyQ2FydFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/Components/LoaiSpMenu/DanhSachSP.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/Components/LoaiSpMenu/DanhSachSP.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9haVNwTWVudVxEYW5oU2FjaFNQLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/Components/LoaiSpMenu/Default.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/Components/LoaiSpMenu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9haVNwTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/Components/NumberCart/Default.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/Components/NumberCart/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTnVtYmVyQ2FydFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/Error.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/PartialSP.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/PartialSP.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxTUC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/PartialSP_Shop.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/PartialSP_Shop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxTUF9TaG9wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/_LayoutWebBanHang.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/_LayoutWebBanHang.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRXZWJCYW5IYW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/ShoppingCart/Index.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/ShoppingCart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/_ViewImports.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/_ViewStart.cshtml]
+[E:/Web-Ban-Quan-Ao-ASP.NET-MVC/WebBanHangOnline/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
