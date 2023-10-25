@@ -39,9 +39,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Controllers\Data\" />
     <Folder Include="Areas\Admin\Controllers\Models\" />
-    <Folder Include="Areas\Admin\Views\KhachHang\" />
-    <Folder Include="Areas\Admin\Views\User\" />
-    <Folder Include="Areas\Admin\Views\NhanVien\" />
   </ItemGroup>
 
   <ItemGroup>
