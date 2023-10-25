@@ -12,9 +12,9 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
     [Area("Admin")]
     public class HoaDonBansController : Controller
     {
-        private readonly QLBanHangContext _context;
+        private readonly QlbanHangContext _context;
 
-        public HoaDonBansController(QLBanHangContext context)
+        public HoaDonBansController(QlbanHangContext context)
         {
             _context = context;
         }
@@ -49,7 +49,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         // GET: Admin/HoaDonBans/Create
         public IActionResult Create()
         {
-            ViewData["MaKhachHang"] = new SelectList(_context.KhachHangs, "MaKhanhHang", "MaKhanhHang");
+            ViewData["MaKhachHang"] = new SelectList(_context.KhachHangs, "MaKhachHang", "MaKhachHang");
             ViewData["MaNhanVien"] = new SelectList(_context.NhanViens, "MaNhanVien", "MaNhanVien");
             return View();
         }
@@ -67,7 +67,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaKhachHang"] = new SelectList(_context.KhachHangs, "MaKhanhHang", "MaKhanhHang", hoaDonBan.MaKhachHang);
+            ViewData["MaKhachHang"] = new SelectList(_context.KhachHangs, "MaKhachHang", "MaKhachHang", hoaDonBan.MaKhachHang);
             ViewData["MaNhanVien"] = new SelectList(_context.NhanViens, "MaNhanVien", "MaNhanVien", hoaDonBan.MaNhanVien);
             return View(hoaDonBan);
         }
@@ -85,7 +85,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["MaKhachHang"] = new SelectList(_context.KhachHangs, "MaKhanhHang", "MaKhanhHang", hoaDonBan.MaKhachHang);
+            ViewData["MaKhachHang"] = new SelectList(_context.KhachHangs, "MaKhachHang", "MaKhachHang", hoaDonBan.MaKhachHang);
             ViewData["MaNhanVien"] = new SelectList(_context.NhanViens, "MaNhanVien", "MaNhanVien", hoaDonBan.MaNhanVien);
             return View(hoaDonBan);
         }
@@ -122,7 +122,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaKhachHang"] = new SelectList(_context.KhachHangs, "MaKhanhHang", "MaKhanhHang", hoaDonBan.MaKhachHang);
+            ViewData["MaKhachHang"] = new SelectList(_context.KhachHangs, "MaKhachHang", "MaKhachHang", hoaDonBan.MaKhachHang);
             ViewData["MaNhanVien"] = new SelectList(_context.NhanViens, "MaNhanVien", "MaNhanVien", hoaDonBan.MaNhanVien);
             return View(hoaDonBan);
         }

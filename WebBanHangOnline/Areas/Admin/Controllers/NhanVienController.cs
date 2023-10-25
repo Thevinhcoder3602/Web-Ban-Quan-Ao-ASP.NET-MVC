@@ -12,7 +12,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
     [Route("admin/nhanviens")]
     public class NhanVienController : Controller
     {
-        QLBanHangContext db = new QLBanHangContext();
+        QlbanHangContext db = new QlbanHangContext();
         
         public IActionResult Index()
         {

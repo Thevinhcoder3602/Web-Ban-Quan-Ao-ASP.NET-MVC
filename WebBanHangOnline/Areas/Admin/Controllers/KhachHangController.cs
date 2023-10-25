@@ -12,7 +12,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
     [Route("admin/khachhang")]
     public class KhachHangController : Controller
     {
-        QLBanHangContext db = new QLBanHangContext();
+        QlbanHangContext db = new QlbanHangContext();
 
         public IActionResult Index()
         {
@@ -24,7 +24,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             int pageSize = 8;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
             var lst = db.KhachHangs.AsNoTracking().
-                OrderBy(x => x.MaKhanhHang);
+                OrderBy(x => x.MaKhachHang);
             PagedList<KhachHang> list = new(lst,
                 pageNumber, pageSize);
             return View(list);
@@ -59,7 +59,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             }
 
             var Emlp = await db.KhachHangs
-                .FirstOrDefaultAsync(m => m.MaKhanhHang == makh);
+                .FirstOrDefaultAsync(m => m.MaKhachHang == makh);
             if (Emlp == null)
             {
                 return NotFound();
@@ -95,7 +95,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         public IActionResult XoaKhachHang(string makh)
         {
             TempData["Message"] = "";
-            var acc = db.KhachHangs.Where(x => x.MaKhanhHang == makh).ToList();
+            var acc = db.KhachHangs.Where(x => x.MaKhachHang == makh).ToList();
             db.Remove(db.KhachHangs.Find(makh));
             db.SaveChanges();
             TempData["Message"] = "Khách hàng đã được xóa";

@@ -13,7 +13,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
     [Route("admin/user")]
     public class UserController : Controller
     {
-        QLBanHangContext db = new QLBanHangContext();
+        QlbanHangContext db = new QlbanHangContext();
         [Route("ListUser")]
         public async Task<IActionResult> ListUser()
         {

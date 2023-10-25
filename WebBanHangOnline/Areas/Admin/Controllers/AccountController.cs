@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using WebBanHangOnline.Models;
+using WebBanHangOnline.Extention;
+using System.Security.Cryptography;
 
 namespace WebBanHangOnline.Areas.Admin.Controllers
 {
@@ -29,7 +31,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         public IActionResult DangNhap(string user, string password)
         {
             var taiKhoan = db.Users.SingleOrDefault(x => x.Username.ToLower() == user.ToLower()
-            && x.Password == password);
+            && x.Password == password.ToMD5());
             if (taiKhoan != null)
             {
                 HttpContext.Session.SetString("username", "taiKhoan");
