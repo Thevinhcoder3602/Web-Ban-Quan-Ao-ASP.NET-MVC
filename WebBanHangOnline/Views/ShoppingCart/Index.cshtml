@@ -228,11 +228,11 @@
                                         {
                                             <tr>
                                                 <td class="shoping__cart__item">
-                                                    <img src="~/ProductImages/Imgs/@item.sanpham.AnhDaiDien" alt="">
-                                                    <h5>@item.sanpham.TenSp</h5>
+                                                    <img src="~/ProductImages/Imgs/@item.product.AnhDaiDien" alt="">
+                                                    <h5>@item.product.TenSp</h5>
                                                 </td>
                                                 <td class="shoping__cart__price">
-                                                    @item.sanpham.GiaLonNhat.Value.ToString("#,##0") VNĐ
+                                                    @item.product.GiaLonNhat.Value.ToString("#,##0") VNĐ
                                                 </td>
                                                 <td class="shoping__cart__quantity">
                                                     <div class="quantity">
@@ -242,7 +242,7 @@
                                                     </div>
                                                 </td>
                                                 <td class="shoping__cart__total">
-                                                    @item.tongTien.ToString("#,##0") VNĐ
+                                                    @item.product.GiaLonNhat.Value.ToString("#,##0") VNĐ
                                                 </td>
                                                 <td class="shoping__cart__item__close">
                                                     <span class="icon_close"></span>
@@ -288,7 +288,7 @@
                     <div class="shoping__checkout">
                         <h5>Tổng đơn hàng</h5>
                         <ul>
-                            <li>Thành tiền<span>@Model.Sum(x => x.tongTien).ToString("#,##0") VNĐ</span></li>
+                            <li>Thành tiền<span>@Model.Sum(x => x.TotalMoney).ToString("#,##0") VNĐ</span></li>
                           
                         </ul>
                         <a href="#" class="primary-btn">THANH TOÁN</a>

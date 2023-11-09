@@ -156,7 +156,9 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li id="numberCart" class="minicart-wrap me-3 me-lg-0">
+                                @await Component.InvokeAsync("NumberCart")
+                            </li>
                         </ul>
                         <div class="header__cart__price">item: <span>$150.00</span></div>
                     </div>
@@ -420,7 +422,8 @@
     <script src="~/1LayoutWeb/js/mixitup.min.js"></script>
     <script src="~/1LayoutWeb/js/owl.carousel.min.js"></script>
     <script src="~/1LayoutWeb/js/main.js"></script>
-
+    @RenderSection("Scripts", required: false)
+   
 
 
 </body>

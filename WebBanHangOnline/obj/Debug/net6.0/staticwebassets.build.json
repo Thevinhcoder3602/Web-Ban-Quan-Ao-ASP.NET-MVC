@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BIpy+ulyBLmT2HRDM0kUWcK05qOQrdSFM/GMvBAFXU4=",
+  "Hash": "J28Y9mYA/+j+nyWjelHzED85E3sdBp1eZTp2dEk1VQs=",
   "Source": "WebBanHangOnline",
   "BasePath": "_content/WebBanHangOnline",
   "Mode": "Default",
@@ -423,6 +423,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\1LayoutAdmin\\assets\\images\\dashboard\\img_4.jpg"
+    },
+    {
+      "Identity": "E:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutAdmin\\assets\\images\\faces\\account.jpg",
+      "SourceId": "WebBanHangOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\",
+      "BasePath": "_content/WebBanHangOnline",
+      "RelativePath": "1LayoutAdmin/assets/images/faces/account.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\1LayoutAdmin\\assets\\images\\faces\\account.jpg"
     },
     {
       "Identity": "E:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutAdmin\\assets\\images\\faces\\admin.jpg",

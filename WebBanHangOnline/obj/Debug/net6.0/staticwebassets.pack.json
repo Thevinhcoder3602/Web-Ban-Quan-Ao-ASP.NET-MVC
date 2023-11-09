@@ -113,6 +113,10 @@
       "PackagePath": "staticwebassets\\1LayoutAdmin\\assets\\images\\faces-clipart\\pic-4.png"
     },
     {
+      "Id": "E:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutAdmin\\assets\\images\\faces\\account.jpg",
+      "PackagePath": "staticwebassets\\1LayoutAdmin\\assets\\images\\faces\\account.jpg"
+    },
+    {
       "Id": "E:\\Web-Ban-Quan-Ao-ASP.NET-MVC\\WebBanHangOnline\\wwwroot\\1LayoutAdmin\\assets\\images\\faces\\admin.jpg",
       "PackagePath": "staticwebassets\\1LayoutAdmin\\assets\\images\\faces\\admin.jpg"
     },

@@ -39,7 +39,7 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             }
             else
             {
-                TempData["error"] = "Tài khoản hoặc mật khẩu không đúng";
+                TempData["error"] = "Thông tin đăng nhập không đúng";
                 return View();
             }    
          

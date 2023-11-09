@@ -45,14 +45,21 @@
                     <p>
                         @Model.GioiThieuSp
                     </p>
-                    <div class="product__details__quantity">
-                        <div class="quantity">
-                            <div class="pro-qty">
-                                <input type="text" value="1">
+                    <ul>
+                        <li class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input id="txtsoLuong" name="txtsoLuong" type="text" value="1">
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <a href="#" class="primary-btn">ADD TO CARD</a>
+                        </li>
+                        <li class="add-to-cart" data-productid="@Model.MaSp">
+                            <a href="javascript:void(0)" class="primary-btn">
+                                Thêm vào giỏ hàng
+                            </a>
+                            <input type="hidden" id="MaSp" value="@Model.MaSp" />
+                        </li>
+                    </ul>
                     <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
                     <ul>
                         <li><b>Availability</b> <span>In Stock</span></li>
@@ -124,3 +131,54 @@
     </div>
 </section>
 <!-- Product Details Section End -->
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                $(".add-to-cart").click(function () {
+                    var productid = $(this).data("productid");
+                    var soLuong = $('#txtsoLuong').val();
+                    $.ajax({
+                        url: '/api/cart/add',
+                        type: "POST",
+                        dataType: "JSON",
+                        data: {
+                            maSP: productid,
+                            soLuong: soLuong
+                        },
+                        success: function (response) {
+                            loadHeaderCart();
+                            location.reload();
+                        },
+                        error: function (error) {
+                            alert("There was an error posting the data to the server: " + error.responseText);
+                        }
+                    });
+                });
+
+                $(".removecart").click(function () {
+                    var productid = $(this).data("productid");
+                    $.ajax({
+                        url: "/api/cart/remove",
+                        type: "POST",
+                        dataType: "JSON",
+                        data: { maSP: productid },
+                        success: function (response) {
+                            loadHeaderCart();
+                            location.reload();
+                        },
+                        error: function (error) {
+                            alert("Remove Cart Error!");
+                        }
+                    });
+                });
+            });
+
+            function loadHeaderCart() {
+                $('#miniCart').load("/AjaxContent/HeaderCart");
+                $('#numberCart').load("/AjaxContent/NumberCart");
+            }
+        });
+    </script>
+
+    }

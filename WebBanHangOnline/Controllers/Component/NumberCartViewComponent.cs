@@ -11,12 +11,7 @@ namespace WebBanHangOnline.Controllers.Component
         public IViewComponentResult Invoke()
         {
             var cart = HttpContext.Session.Get<List<CartItem>>("GioHang");
-            int soLuongSP = 0;
-            if (cart != null)
-            {
-                soLuongSP = cart.Count;
-            }
-            return View(soLuongSP);
+            return View(cart);
         }
 
     }

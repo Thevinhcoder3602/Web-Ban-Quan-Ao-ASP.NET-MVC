@@ -119,7 +119,7 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a asp-controller="ShoppingCart" asp-action="Index"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
                         <div class="header__cart__price">item: <span>$150.00</span></div>
                     </div>
@@ -186,7 +186,21 @@
             <div class="row">
                 <div class="col-lg-3 col-md-5">
                     <div class="sidebar">
-                        @await Component.InvokeAsync("LoaiSpMenu", new { ViewName = "DanhSachSP" })
+                        <div class="sidebar__item">
+                            
+                            <h4>Danh sách sản phẩm</h4>
+                            <ul>
+                                <li><a href="#">BABY TEE</a></li>
+                                <li><a href="#">BOTTOM</a></li>
+                                <li><a href="#">HOODIE</a></li>
+                                <li><a href="#">JACKET</a></li>
+                                <li><a href="#">SWEATER</a></li>
+                                <li><a href="#">TEE</a></li>
+                               
+                            </ul>
+                          
+                        </div>
+                       
                         <div class="sidebar__item">
                             <h4>Giá</h4>
                             <div class="price-range-wrap">
@@ -272,6 +286,8 @@
                         </div>
                     </div>
                 </div>
+
+            
                 <div class="col-lg-9 col-md-7">
                     <div class="filter__item">
                         <div class="row">

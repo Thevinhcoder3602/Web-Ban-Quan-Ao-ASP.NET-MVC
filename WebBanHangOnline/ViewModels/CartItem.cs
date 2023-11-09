@@ -1,4 +1,5 @@
 ﻿using WebBanHangOnline.Models;
+using WebBanHangOnline.Models.ProductModels;
 
 namespace WebBanHangOnline.ViewModels
 
@@ -6,9 +7,9 @@ namespace WebBanHangOnline.ViewModels
     public class CartItem
     {
 
-        public  DanhMucSp sanpham { get; set; }
-        public int soLuong { get; set; }
-        public double tongTien => (double)(soLuong * sanpham.GiaLonNhat);
+        public  DanhMucSp product { get; set; }
+        public int amount { get; set; }
+        public double TotalMoney => (double)(amount * product.GiaLonNhat.Value);
     }
 }
  
