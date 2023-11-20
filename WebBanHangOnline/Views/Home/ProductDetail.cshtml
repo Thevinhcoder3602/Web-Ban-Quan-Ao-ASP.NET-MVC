@@ -5,7 +5,7 @@
    
 }
 
-}
+
 @model WebBanHangOnline.ViewModels.HomeProductDetailViewModel
 
 <!-- Product Details Section Begin -->
@@ -47,21 +47,19 @@
                     <p>
                         @Model.danhMucSP.GioiThieuSp
                     </p>
-                    <ul>
-                        <li class="product__details__quantity">
-                            <div class="quantity">
-                                <div class="pro-qty">
-                                    <input id="txtsoLuong" name="txtsoLuong" type="text" value="1">
-                                </div>
+                    <div class="product__details__quantity">
+                        <div class="quantity">
+                            <div class="pro-qty">
+                                
+                                <input id="txtsoLuong" name="txtsoLuong" type="text" value="1">
+                                
                             </div>
-                        </li>
-                        <li class="add-to-cart">
-                            <a href="javascript:void(0)" class="primary-btn">
-                                Thêm vào giỏ hàng
-                            </a>
-                            <input hidden asp-for="danhMucSP.MaSp" />
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <div class="add-to-cart">
+                        <a href="javascript:void(0)" class="primary-btn">Thêm vào giỏ hàng</a>
+                        <input hidden asp-for="danhMucSP.MaSp" />
+                    </div>
                     <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
                     <ul>
                         <li><b>Tình trạng</b> <span>Còn hàng</span></li>

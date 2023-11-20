@@ -35,14 +35,18 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult ThemSanPhamMoi()
         {
-            ViewBag.MaChatLieu = new SelectList(db.ChatLieus.ToList(),
-                "MaChatLieu", "ChatLieu");
-            ViewBag.MaChatLieu = new SelectList(db.ChatLieus.ToList(),
+            if (ViewBag.MaChatLieu == null)
+            {
+                ViewBag.MaChatLieu = new SelectList(db.ChatLieus.ToList(), "MaChatLieu", "TenChatLieu");
+            }
+            ViewBag.MaHangSx = new SelectList(db.HangSxes.ToList(),
                 "MaHangSx", "HangSx");
-            ViewBag.MaChatLieu = new SelectList(db.ChatLieus.ToList(),
+
+            ViewBag.MaLoai = new SelectList(db.LoaiSps.ToList(),
                 "MaLoai", "Loai");
-            ViewBag.MaChatLieu = new SelectList(db.ChatLieus.ToList(),
-                "MaChatLieu", "ChatLieu");
+
+            ViewBag.MaNuocSx = new SelectList(db.QuocGia.ToList(),
+                "MaNuoc", "TenNuoc");
             return View();
         }
         [Route("ThemSanPhamMoi")]
@@ -63,17 +67,19 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult SuaSanPham(string maSanPham)
         {
-            ViewBag.MaChatLieu = new SelectList(db.ChatLieus.ToList(),
-                "MaChatLieu", "ChatLieu");
+            if (ViewBag.MaChatLieu == null)
+            {
+                ViewBag.MaChatLieu = new SelectList(db.ChatLieus.ToList(), "MaChatLieu", "TenChatLieu");
+            }
 
-            ViewBag.MaChatLieu = new SelectList(db.ChatLieus.ToList(),
+            ViewBag.MaHangSx = new SelectList(db.HangSxes.ToList(),
                 "MaHangSx", "HangSx");
 
-            ViewBag.MaChatLieu = new SelectList(db.ChatLieus.ToList(),
+            ViewBag.MaLoai = new SelectList(db.LoaiSps.ToList(),
                 "MaLoai", "Loai");
 
-            ViewBag.MaChatLieu = new SelectList(db.ChatLieus.ToList(),
-                "MaChatLieu", "ChatLieu");
+            ViewBag.MaNuocSx = new SelectList(db.QuocGia.ToList(),
+                "MaNuoc", "TenNuoc");
 
             var sanPham = db.DanhMucSps.Find(maSanPham);
             return View(sanPham);
@@ -90,6 +96,24 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
                 return RedirectToAction("DanhMucSanPham","HomeAdmin");
             }
             return View(sanPham);
+        }
+        [Route("ChiTietSanPham")]
+        [HttpGet]
+        public async Task<IActionResult> ChiTietSanPham(string id)
+        {
+            if (id == null || db.DanhMucSps == null)
+            {
+                return NotFound();
+            }
+
+            var danhMucSp = await db.DanhMucSps
+                .FirstOrDefaultAsync(m => m.MaSp == id);
+            if (danhMucSp == null)
+            {
+                return NotFound();
+            }
+
+            return View(danhMucSp);
         }
 
         [Route("XoaSanPham")]

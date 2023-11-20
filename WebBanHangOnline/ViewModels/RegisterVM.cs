@@ -29,7 +29,8 @@ namespace WebBanHangOnline.ViewModels
         [MinLength(5, ErrorMessage = "Bạn cần đặt mật khẩu tối thiếu 5 ký tự")]
         public string Password { get; set; } = null!;
 
-        [MinLength(5, ErrorMessage = "Bạn cần đặt mật khẩu tối thiếu 5 ký tự")]
+		[Required(ErrorMessage = "Vui lòng nhập xác nhận mật khẩu.")]
+		[MinLength(5, ErrorMessage = "Bạn cần đặt mật khẩu tối thiếu 5 ký tự")]
         [Display(Name = "Nhập lại mật khẩu")]
         [Compare("Password",ErrorMessage = "Vui lòng nhập mật khẩu giống nhau")]
         public string? ConfirmPassword { get; set; }

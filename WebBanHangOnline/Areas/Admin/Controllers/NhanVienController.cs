@@ -33,10 +33,14 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult ThemNhanVien()
         {
-            ViewBag.Username = new SelectList(db.Users.ToList(),
+            
+                ViewBag.Username = new SelectList(db.Users.ToList(),
                 "Username", "Username");
-            return View();
+                return View();
+           
+           
         }
+
         [Route("ThemNhanVien")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -71,10 +75,12 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult SuaNhanVien(string maNV)
         {
-            ViewBag.Username = new SelectList(db.Users.ToList(),
+            
+                ViewBag.Username = new SelectList(db.Users.ToList(),
                 "Username", "Username");
-            var NV = db.NhanViens.Find(maNV);
-            return View(NV);
+                var NV = db.NhanViens.Find(maNV);
+                return View(NV);
+            
         }
         [Route("SuaNhanVien")]
         [HttpPost]
@@ -94,14 +100,18 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult XoaNhanVien(string manv)
         {
-            TempData["Message"] = "";
-            var acc = db.NhanViens.Where(x => x.MaNhanVien == manv).ToList();
-            db.Remove(db.NhanViens.Find(manv));
-            db.SaveChanges();
-            TempData["Message"] = "Nhân viên đã được xóa";
-            return RedirectToAction("ListNhanVien", "NhanVien");
-        }
+            
 
+            
+                TempData["Message"] = "";
+                var acc = db.NhanViens.Where(x => x.MaNhanVien == manv).ToList();
+                db.Remove(db.NhanViens.Find(manv));
+                db.SaveChanges();
+                TempData["Message"] = "Nhân viên đã được xóa";
+                return RedirectToAction("ListNhanVien", "NhanVien");
+            
+        }
+       
     }
 
 }

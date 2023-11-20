@@ -109,9 +109,7 @@ public partial class QlbanHangContext : DbContext
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .IsFixedLength();
-            entity.Property(e => e.ChatLieu1)
-                .HasMaxLength(150)
-                .HasColumnName("ChatLieu");
+            entity.Property(e => e.TenChatLieu).HasMaxLength(150);
         });
 
         modelBuilder.Entity<ChiTietHdban>(entity =>

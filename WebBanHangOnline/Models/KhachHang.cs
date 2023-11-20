@@ -25,7 +25,9 @@ public partial class KhachHang
 
     public string? GhiChu { get; set; }
 
-    public virtual ICollection<HoaDonBan> HoaDonBans { get; set; } = new List<HoaDonBan>();
+	
+
+	public virtual ICollection<HoaDonBan> HoaDonBans { get; set; } = new List<HoaDonBan>();
 
     public virtual User UsernameNavigation { get; set; } = null!;
 }

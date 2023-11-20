@@ -7,7 +7,7 @@ public partial class ChatLieu
 {
     public string MaChatLieu { get; set; } = null!;
 
-    public string? ChatLieu1 { get; set; }
+    public string? TenChatLieu { get; set; }
 
     public virtual ICollection<DanhMucSp> DanhMucSps { get; set; } = new List<DanhMucSp>();
 }

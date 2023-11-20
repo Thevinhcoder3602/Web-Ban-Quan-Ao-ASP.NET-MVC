@@ -95,9 +95,10 @@ namespace WebBanHangOnline.Controllers
                  // Gán mật khẩu đã băm vào đối tượng User
                 user.Password = hashPassword;
 
+              
 
-				// Tạo mã khách hàng tự động dựa trên số lượng khách hàng hiện có
-		        var khachHangCount = db.KhachHangs.Count() + 1;
+                // Tạo mã khách hàng tự động dựa trên số lượng khách hàng hiện có
+                var khachHangCount = db.KhachHangs.Count() + 1;
 				string maKhachHang = "KH" + khachHangCount.ToString("D3");
 				// D3 để tạo mã có dạng KH001, KH002, ...
 				
